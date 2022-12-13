@@ -1,5 +1,8 @@
 #~/bin/sh
 
-nasm bootloader.asm
+nasm s1/bootloader.asm
+nasm s2+/ExtendedProgram.asm
 
-qemu-system-x86_64 bootloader
+cat s1/bootloader s2+/ExtendedProgram > img
+
+qemu-system-x86_64 img

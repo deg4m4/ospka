@@ -2,6 +2,7 @@
 PROGRAM_SPACE equ 0x7e00
 
 DiskRead:
+    mov ah, 0x02
     mov bx, PROGRAM_SPACE
     mov al, 4
     mov dl, [BOOT_DISK]
@@ -13,6 +14,8 @@ DiskRead:
 
     jc DiskReadFailed
     ret
+
+%include "s2+/print.asm"
 
 BOOT_DISK:
     db 0
