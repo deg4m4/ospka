@@ -3,6 +3,8 @@
 mov bx, espsuccess
 call printstring
 
+jmp $
+
 %include "s2+/print.asm"
 
 espsuccess: db 'success message', 0
