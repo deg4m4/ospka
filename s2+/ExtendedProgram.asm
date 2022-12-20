@@ -7,6 +7,6 @@ jmp $
 
 %include "s2+/print.asm"
 
-espsuccess: db 'success message', 0
+espsuccess: db 'Hello, Success!', 0
 
 times 2048-($-$$) db 0
